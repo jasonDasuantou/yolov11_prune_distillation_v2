@@ -1,5 +1,3 @@
-以下是针对您提供的代码整理的GitHub项目README.md模板，使用Markdown格式编写：
-
 ```markdown
 # YOLOv11 模型剪枝与蒸馏训练框架
 
@@ -8,7 +6,6 @@
 [![PyTorch 2.6](https://img.shields.io/badge/PyTorch-2.6-%23EE4C2C.svg)](https://pytorch.org/)
 
 本项目提供基于YOLOv11的目标检测模型训练框架，支持模型剪枝与知识蒸馏技术，包含完整的训练流程管理。主要特性包括：
-- 五阶段渐进式模型优化
 - BN层稀疏化训练
 - 通道级模型剪枝
 - 知识蒸馏技术
@@ -29,14 +26,13 @@ torchvision==0.21.0
 ultralytics==8.3.28
 ray==2.44.1
 ```
-完整依赖见 [requirements.txt](https://github.com/yourusername/yolov11-pruning-distillation/requirements.txt)
-
+完整依赖见 [requirements.txt](https://github.com/jasonDasuantou/yolov11_prune_distillation_v2/blob/master/requirements.txt)
 ## 🚀 快速开始
 
 ### 1. 克隆仓库
 ```bash
-git clone https://github.com/yourusername/yolov11-pruning-distillation.git
-cd yolov11-pruning-distillation
+git clone https://github.com/jasonDasuantou/yolov11_prune_distillation_v2.git
+cd yolov11_prune_distillation_v2
 ```
 
 ### 2. 配置文件准备
@@ -45,7 +41,7 @@ cd yolov11-pruning-distillation
 - `yolo11n.pt`（预训练模型）
 
 ### 3. 执行训练流程
-修改`train.py`主函数调用：
+修改`train_yolov11.py`主函数调用：
 ```python
 if __name__ == '__main__':
     # step1_train()
@@ -127,7 +123,7 @@ def custom_pruning(...):
 
 ## 📌 注意事项
 1. 各阶段执行顺序不可颠倒
-2. 约束训练后务必恢复`trainer.py`注释
+2. 约束训练后务必恢复`ultralytics/engine/trainer.py`注释
 3. 建议剪枝率不超过85%
 4. 蒸馏阶段需要双模型显存空间
 
@@ -141,19 +137,3 @@ def custom_pruning(...):
 ## 📜 许可证
 本项目采用 [MIT License](LICENSE)
 ```
-
-主要特点说明：
-1. 采用模块化结构，层次清晰
-2. 包含完整的配置说明和参数解释
-3. 添加性能对比表格直观展示效果
-4. 强调注意事项和常见问题
-5. 包含贡献指南和开源协议
-6. 使用徽章提升专业度
-
-建议根据实际项目情况调整以下内容：
-1. GitHub仓库链接
-2. 性能指标数据
-3. 依赖库具体版本
-4. 许可证文件
-5. 示例数据集配置说明
-6. 预训练模型获取方式
