@@ -1,0 +1,14 @@
+# 数据集根目录
+path: /mnt/wsj/OCR/datasets/xima/yolo-v10
+
+# 训练集、验证集和测试集相对于数据集根目录的路径
+train: images/train # 训练集图片
+val: images/val # 验证集图片
+# test: images/test # 测试集图片
+
+# 类别数
+nc: 1
+
+# 类别名称映射，确保与标签文件中的ID一致
+names:
+  0: sxm
